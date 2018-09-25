@@ -1,4 +1,4 @@
-# AndroidDemos
+# Android Demo's
 Kleine Android demo's op bepaalde tehnologieen.
 
 Behandelde materie:
