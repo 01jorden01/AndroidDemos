@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".GeoActivity">
+
+    <ImageView
+        android:id="@+id/imageViewMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_streetview_black_24dp"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="Locatie selecteren"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewMaps"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMaps"
+        app:layout_constraintTop_toTopOf="@+id/imageViewMaps" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutLongi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/layoutLati"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:layout_editor_absoluteX="16dp">
+
+        <EditText
+            android:id="@+id/txtLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutLati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/btnToonLocatie"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLongi"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/txtLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--<androidx.appcompat.widget.AppCompatEditText-->
+    <!--android:id="@+id/txtLongitude"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="longitude"-->
+    <!--android:inputType="numberDecimal"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/btnToonLocatie"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/layoutLongi"-->
+    <!--tools:layout_editor_absoluteX="0dp" />-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToonLocatie"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/layoutLati"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Bevestig Locatie"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_done_black_24dp"
+
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLongi"
+        app:rippleColor="@color/colorAccent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
